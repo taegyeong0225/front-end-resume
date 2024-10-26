@@ -1,0 +1,13 @@
+body {
+    background-color: #ffe3e3; /* 전체 배경색 설정 */
+  }
+  
+  .typing-text {
+    text-align: center;
+    display: block;
+    margin: 5px auto;
+    font-size: 2em;
+    background-color: #ffcdcd;
+    padding: 40px 10px; /* 상하 20px, 좌우 10px 여백 */
+  }
+  
