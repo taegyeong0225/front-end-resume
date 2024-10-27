@@ -6,12 +6,13 @@
     z-index: 1000; /* 콘텐츠 위에 고정 */
   }
 
+
+/* 전체 배경색 설정 */
 body {
-    background-color: #dfeaff; /* 전체 배경색 설정 */
+    background-color: #dfeaff;
   }
   
 .typing-text {
-    font-family: 'Freesentation-9Black', sans-serif;
     text-align: center;
     display: block;
     margin: 5px auto;
@@ -34,3 +35,50 @@ body {
     transform: translateY(-100%); /* 헤더를 위로 숨기기 */
     transition: transform 0.3s ease; /* 부드러운 이동 효과 */
   }
+
+/* 프로필 이미지*/
+  .profile-image {
+    width: 150px; /* 필요에 따라 크기 조정 */
+    height: auto;
+    margin-left: 8%; 
+    border-radius: 3%; /* 원형으로 표시 */
+  }
+
+/* 헤더 높이만큼 여백 추가 */
+.main-content {
+  margin-top: 150px; 
+}
+
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro-text {
+  font-size: 1.1em;
+  margin-left: 10%;
+}
+
+.intro-text h2 {
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.intro-text p {
+  margin: 5px 0;
+}
+
+
+/* 연락처 */
+.contact-info {
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬 */
+  gap: 10px; /* 아이콘과 텍스트 간의 간격 조절 */
+}
+
+.contact-info p {
+  margin: 0; /* 기본 마진 제거 */
+}
+
