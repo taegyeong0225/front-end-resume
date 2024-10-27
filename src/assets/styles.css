@@ -1,13 +1,36 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s ease; /* 부드러운 이동 효과 */
+    z-index: 1000; /* 콘텐츠 위에 고정 */
+  }
+
 body {
-    background-color: #ffe3e3; /* 전체 배경색 설정 */
+    background-color: #dfeaff; /* 전체 배경색 설정 */
   }
   
-  .typing-text {
+.typing-text {
+    font-family: 'Freesentation-9Black', sans-serif;
     text-align: center;
     display: block;
     margin: 5px auto;
     font-size: 2em;
-    background-color: #ffcdcd;
+    background-color: #cbd7f5;
     padding: 40px 10px; /* 상하 20px, 좌우 10px 여백 */
   }
   
+
+/* 폰트 지정 : 프리젠테이션체 (https://noonnu.cc/font_page/1369#google_vignette) */
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* 헤더가 숨겨질 때 적용될 클래스 */
+.scrollDown {
+    transform: translateY(-100%); /* 헤더를 위로 숨기기 */
+    transition: transform 0.3s ease; /* 부드러운 이동 효과 */
+  }
