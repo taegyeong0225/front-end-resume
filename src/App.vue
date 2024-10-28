@@ -1,32 +1,85 @@
 <template>
   <div>
     <header :class="{ scrollDown: isScrollDown }" class="header">
-      <h1 v-typing="'책임감 있는 데이터 분석가 고태경입니다.'" data-delay="200" class="typing-text"></h1>
+      <h1 v-typing="'ABCDEFG'" data-delay="200" class="typing-text"></h1>
     </header>
     <main class="main-content">
+      <!-- introduction -->
       <div class="intro-section">
         <img src="@/assets/증명사진.jpg" alt="Profile Image" class="profile-image">
-        <div class="intro-text">
-          <h2>| INTRODUCTION</h2>
-          <div class="contact-info">
+        <div class="intro-text icon">
+          <h2 class="section-title">INTRODUCTION</h2>
+          <div class="contact-info icon">
             <font-awesome-icon :icon="['fas', 'venus']" />
-            <p>고태경</p>
+            <span>고태경</span>
           </div>
-
-          <div class="contact-info">
+          <div class="contact-info icon">
             <font-awesome-icon :icon="['fas', 'cake-candles']" />
-            <p>2004.02.25 (만 20세)</p>
+            <span>2004.02.25 (만 20세)</span>
           </div>
-          <div class="contact-info">
+          <div class="contact-info icon">
             <font-awesome-icon :icon="['fas', 'phone']" />
-            <p>010-2987-5082</p>
+            <span>010-2987-5082</span>
           </div>
-          <div class="contact-info">
+          <div class="contact-info icon">
             <font-awesome-icon :icon="['fas', 'envelope']" />
-            <p>202244042@itc.ac.kr</p>
+            <span>202244042@itc.ac.kr</span>
           </div>
         </div>
       </div>
+
+      <!-- education -->
+      <div class="education-section">
+        <div class="intro-text">
+          <h2 class="section-title">EDUCATION</h2>
+        </div>
+        <div class="education-info icon">
+            <font-awesome-icon :icon="['fas', 'school']" />
+            <span>2022.03~2025.02 |  인하공업전문대학 컴퓨터정보공학과  | 4.01 / 4.5</span>
+          </div>
+      </div>
+
+      <!-- skills -->
+      <div class="skills-section">
+        <div class="intro-text">
+          <h2 class="section-title">SKILLS</h2>
+        </div>
+
+        <div class="skills-name">
+            <span>python</span>
+        </div>
+        <div class="skill-info">
+          <p>
+            웹 크롤링을 통한 데이터 수집, Matplotlib, Seaborn 등 라이브러리를 통한  데이터 시각화 <br>
+             django 프레임워크를 통한 CRUD 구현 및 ajax를 이용한 비동기식 처리/
+          </p>
+        </div>
+
+        <div class="skills-name">
+            <span>MySql</span>
+        </div>
+        <div class="skill-info">
+          <p>DDL/DML/DCL문 작성</p>
+        </div>
+
+        <div class="skills-name">
+            <span>Oracle</span>
+        </div>
+        <div class="skill-info">
+          <p>DDL/DML/DCL 작성 <br>
+             PL/SQL 작성
+          </p>
+        </div>
+
+        <div class="skills-name">
+            <span>Power Bi</span>
+        </div>
+        <div class="skill-info">
+          <p>쿼리 편집기를 통해 요구 사항에 맞게 데이터를 전처리 및 시각화</p>
+        </div>
+        
+      </div>
+
       <p>여기에 포트폴리오 콘텐츠가 들어갑니다.</p>
     </main>
   </div>

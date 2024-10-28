@@ -74,6 +74,8 @@ body {
 /* 연락처 */
 .contact-info {
   display: flex;
+  margin-left: 10px;
+  margin-bottom: 10px;
   align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬 */
   gap: 10px; /* 아이콘과 텍스트 간의 간격 조절 */
 }
@@ -82,3 +84,16 @@ body {
   margin: 0; /* 기본 마진 제거 */
 }
 
+
+.education-info {
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬 */
+  gap: 10px; /* 아이콘과 텍스트 간의 간격 조절 */
+}
+
+.section-title::before {
+  content: "|";         /* | 기호를 삽입 */
+  margin-right: 8px;    /* 텍스트와의 간격 조절 */
+  color: rgb(140, 136, 136);          /* | 기호 색상 */
+  font-size: 24px;      /* 기호 크기 (텍스트와 동일하게 설정) */
+}
