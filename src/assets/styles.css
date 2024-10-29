@@ -7,6 +7,7 @@
     width: 100%;
     transition: transform 0.3s ease; /* 부드러운 이동 효과 */
     z-index: 1000; /* 콘텐츠 위에 고정 */
+    background-color: #eff3fb;
   }
 
 /* 타이핑 효과 부분 */
@@ -20,6 +21,16 @@
   padding: 40px 10px; /* 상하 20px, 좌우 10px 여백 */
 }
 
+.cursor {
+  display: inline-block; /* 인라인 블록으로 설정 */
+  animation: blink 0.7s step-end infinite; /* 깜빡이는 애니메이션 설정 */
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 /* 헤더가 숨겨질 때 적용될 클래스 */
 .scrollDown {
@@ -99,12 +110,14 @@ body {
   margin: 5px 0;
 }
 
-
 .education-info {
   display: flex;
+  margin-left: 15px;
+  margin-bottom: 10px;
   align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬 */
   gap: 10px; /* 아이콘과 텍스트 간의 간격 조절 */
 }
+
 
 .section-title::before {
   content: "|";         /* | 기호를 삽입 */
@@ -126,4 +139,34 @@ body {
 
 .skills-info {
   margin-left: 20px;
+}
+
+/**********************
+        tab 부분 
+  *********************/
+.tab-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tab-menu li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.tab-menu .active {
+  font-weight: bold;
+  color: red; /* 활성 탭의 색상 */
+}
+
+.tab-menu li a {
+  text-decoration: none; /* 언더라인 제거 */
+}
+
+.tab-content {
+  max-height: 400px; /* 원하는 높이 */
+  overflow-y: auto;  /* 세로 스크롤 활성화 */
+  padding: 10px;     /* 내부 여백 */
+  border: 1px solid #ddd; /* 테두리 */
+  margin-bottom: 3px;
 }
