@@ -123,7 +123,7 @@ body {
   content: "|";         /* | 기호를 삽입 */
   margin-right: 8px;    /* 텍스트와의 간격 조절 */
   color: rgb(140, 136, 136);          /* | 기호 색상 */
-  font-size: 24px;      /* 기호 크기 (텍스트와 동일하게 설정) */
+  font-size: 26px;      /* 기호 크기 (텍스트와 동일하게 설정) */
 }
 
 
@@ -141,32 +141,13 @@ body {
   margin-left: 20px;
 }
 
-/**********************
-        tab 부분 
-  *********************/
-.tab-menu {
-  list-style-type: none;
-  padding: 0;
-}
 
-.tab-menu li {
-  display: inline;
-  margin-right: 10px;
+/* 표 */
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
-
-.tab-menu .active {
-  font-weight: bold;
-  color: red; /* 활성 탭의 색상 */
-}
-
-.tab-menu li a {
-  text-decoration: none; /* 언더라인 제거 */
-}
-
-.tab-content {
-  max-height: 400px; /* 원하는 높이 */
-  overflow-y: auto;  /* 세로 스크롤 활성화 */
-  padding: 10px;     /* 내부 여백 */
-  border: 1px solid #ddd; /* 테두리 */
-  margin-bottom: 3px;
+th, td {
+  text-align: left;
+  padding: 8px;
 }
