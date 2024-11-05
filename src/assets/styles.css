@@ -151,3 +151,7 @@ th, td {
   text-align: left;
   padding: 8px;
 }
+
+.contact-info a {
+  text-decoration: none;
+}
