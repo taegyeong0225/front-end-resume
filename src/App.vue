@@ -1,13 +1,31 @@
 <template>
   <div>
+    <!-- 사이드바 -->
+    <div class="sidebar">
+      <div class="profile">
+        <img src="@/assets/증명사진.jpg" alt="Profile Image" class="profile-image" />
+        <h2>고태경</h2>
+        <p>Data Analyst</p>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li v-for="(item, index) in navItems" :key="index">
+            <a href="#" @click.prevent="scrollToSection(item.id)">
+              {{ item.name }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <!-- header -->
-    <header :class="{ scrollDown: isScrollDown }" class="header">
+    <!-- <header :class="{ scrollDown: isScrollDown }" class="header">
       <h1 class="typing-text">
         <span v-typing="'안녕하세요'" data-delay="200"></span>
-        <span class="cursor">|</span> <!-- 커서 추가 -->
-      </h1>
+        <span class="cursor">|</span> 
+      </h1> -->
       <!-- introduction section -->
-      <div class="intro-section">
+      <!-- <div class="intro-section">
         <img src="@/assets/증명사진.jpg" alt="Profile Image" class="profile-image">
         <div class="intro-text icon">
           <h2 class="section-title">INTRODUCTION</h2>
@@ -35,11 +53,11 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
     <!-- main content -->
     <main class="main-content">
       <!-- 학력 -->
-      <div class="education-section section">
+      <div id="section-0" class="section">
         <div class="intro-text">
           <h2 class="section-title">학력</h2>
         </div>
@@ -74,9 +92,9 @@
         </div>
       </div>
       <!-- skills -->
-      <div class="skills-section section">
+      <div id="section-1" class="section">
         <div class="intro-text">
-          <h2 class="section-title">SKILLS</h2>
+          <h2 class="section-title">기술능력</h2>
         </div>
         <div class="skills-name">
           <span>python</span>
@@ -107,7 +125,7 @@
         </div>
       </div>
       <!-- 수상내역 -->
-      <div class="awards-section section">
+      <div id="section-2" class="section">
         <div class="intro-text">
           <h2 class="section-title">수상내역</h2>
         </div>
@@ -165,10 +183,8 @@
           </table>
         </div>
       </div>
-
-
       <!-- 활동내역 -->
-      <div class="awards-section section">
+      <div id="section-3" class="section">
         <div class="intro-text">
           <h2 class="section-title">교내외 활동내역</h2>
         </div>
@@ -226,9 +242,8 @@
           </table>
         </div>
       </div>
-
       <!-- 자격증 -->
-      <div class="qualifications-section section">
+      <div id="section-4" class="section">
         <div class="intro-text">
           <h2 class="section-title">자격증</h2>
         </div>
@@ -257,9 +272,9 @@
         </div>
       </div>
       <!-- project 이력 -->
-      <div class="project-section section">
+      <div id="section-5" class="section">
         <div class="intro-text">
-          <h2 class="section-title">PROJECT</h2>
+          <h2 class="section-title">프로젝트</h2>
         </div>
         <div class="education-info icon">
           <span> 프로젝트 !! </span>
@@ -274,17 +289,17 @@ export default {
   name: 'App',
   directives: {
     typing: {
-      mounted(el, binding) {  // Vue 3에서는 mounted 사용
-        let text = binding.value;  // 전달된 텍스트 값
-        let delay = parseInt(el.dataset.delay) || 100;  // 기본값을 100ms로 설정
+      mounted(el, binding) {
+        let text = binding.value;
+        let delay = parseInt(el.dataset.delay) || 100; // 기본값을 100ms로 설정
         let index = 0;
-        el.innerHTML = '';
+        el.innerHTML = ''; // 텍스트 초기화
 
         function typeWriter() {
           if (index < text.length) {
             el.innerHTML += text.charAt(index);
             index++;
-            setTimeout(typeWriter, delay);
+            setTimeout(typeWriter, delay); // 타이핑 효과
           }
         }
 
@@ -297,30 +312,43 @@ export default {
       isScrollDown: false, // 스크롤 상태를 관리하는 변수
       prevScrollTop: 0,
       currentTab: 0, // 현재 활성 탭
-      tabs: ['성장과정', '성격의 장단점', '대학생활', '지원동기 및 포부'] // 탭 제목
+      tabs: ['학력', '기술능력', '수상내역', '교내외 활동내역', '자격증', '프로젝트'], // 탭 제목
+      navItems: [ // 네비게이션에 표시할 아이템
+        { id: 'section-0', name: '학력' },
+        { id: 'section-1', name: '기술능력' },
+        { id: 'section-2', name: '수상내역' },
+        { id: 'section-3', name: '교내외 활동내역' },
+        { id: 'section-4', name: '자격증' },
+        { id: 'section-5', name: '프로젝트' }
+      ]
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll); // 스크롤 이벤트 리스너
   },
   beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll); // 컴포넌트가 언마운트 될 때 스크롤 이벤트 제거
   },
   methods: {
     handleScroll() {
       const nextScrollTop = window.pageYOffset || 0;
       if (nextScrollTop > this.prevScrollTop) {
-        // 스크롤 다운
-        this.isScrollDown = true;
+        this.isScrollDown = true; // 스크롤 다운 상태
       } else if (nextScrollTop < this.prevScrollTop) {
-        // 스크롤 업
-        this.isScrollDown = false;
+        this.isScrollDown = false; // 스크롤 업 상태
       }
       this.prevScrollTop = nextScrollTop;
     },
-    // 탭 네비게이션 메소드 추가
+    // 스크롤로 해당 섹션으로 이동하는 메소드
+    scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' }); // 부드럽게 스크롤
+      }
+    },
     tabnav(index) {
       this.currentTab = index; // 선택된 탭의 인덱스를 currentTab에 저장
+      this.scrollToSection(this.navItems[index].id); // 해당 섹션으로 스크롤 이동
     }
   }
 }

@@ -1,157 +1,139 @@
-/**********************
-      header 부분 
-  *********************/
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: transform 0.3s ease; /* 부드러운 이동 효과 */
-    z-index: 1000; /* 콘텐츠 위에 고정 */
-    background-color: #eff3fb;
-  }
+/* 사이드바 스타일 */
+.sidebar {
+  width: 210px; /* 사이드바 너비 */
+  height: 100vh; /* 화면 전체 높이 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #edeff6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0; /* 불필요한 마진 제거 */
+  z-index: 100; /* 사이드바가 다른 콘텐츠 위에 보이도록 설정 */
+}
 
-/* 타이핑 효과 부분 */
-.typing-text {
+.sidebar .profile {
   text-align: center;
-  display: block;
-  margin: 5px auto;
-  margin-bottom: 25px;
+  margin-top: 40px; /* 증명사진 위에 여백 */
+}
+
+.sidebar .profile img {
+  width: 130px;
+  border-radius: 10%;
+}
+
+/* 네비게이션이 사이드바의 상단에 위치하도록 추가 */
+.sidebar nav {
+  flex-grow: 1; /* 네비게이션 영역을 남은 공간을 차지하도록 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 네비게이션을 상단에 배치 */
+  margin-top: 20px; /* 프로필과 네비게이션 사이에 여백 추가 */
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+/* 사이드바 글자 색상 및 배경색 변경 */
+.sidebar nav ul li a {
+  color: #333; /* 텍스트 색상 (어두운 회색) */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px; /* 패딩 추가하여 클릭 영역을 크게 함 */
+  display: block; /* 링크가 블록 요소처럼 동작하도록 */
+  transition: background-color 0.5s ease; /* 배경 색상 변경 시 부드러운 효과 */
+}
+
+/* hover 시 배경 색상 및 글자 크기 변경 */
+.sidebar nav ul li a:hover {
+  background-color: #d7dffa; /* hover 시 배경 색상 변경 */
+  color: rgb(111, 111, 111); /* 텍스트 색상 변경 */
+  transform: scale(1.1); /* 텍스트 크기 10% 커짐 */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* 배경 색상 및 크기 변경에 부드러운 효과 추가 */
+}
+
+/* 본문 콘텐츠 스타일 */
+.main-content {
+  margin-top: 70px;
+  margin-left: 260px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
+  padding: 20px;
+  width: calc(100% - 250px); /* 사이드바를 제외한 나머지 공간을 차지 */
+}
+
+.section {
+  padding: 20px;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+/* 각 섹션 스타일 */
+section h2 {
   font-size: 2em;
-  background-color: #dce6f9;
-  padding: 40px 10px; /* 상하 20px, 좌우 10px 여백 */
+  margin-bottom: 10px;
 }
 
+/* 네비게이션 링크 스타일 */
+nav ul li a {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #555; /* 항목 사이에 구분선 추가 */
+}
+
+nav ul li a:hover {
+  background-color: #444; /* 호버 시 배경색 변경 */
+}
+
+/* 프로필 이미지 */
+.profile-image {
+  width: 150px; /* 프로필 이미지 크기 */
+  height: auto;
+  margin-left: 8%;
+  border-radius: 50%; /* 원형 이미지 */
+}
+
+/* 표 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd; /* 테이블 셀에 구분선 추가 */
+}
+
+th {
+  background-color: #f4f4f4; /* 헤더 배경색 */
+}
+
+/* 스크롤바 스타일 (필요한 경우) */
+body {
+  background-color: #f7f8ff;
+}
+
+section p {
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* 추가적인 스타일 (타이핑 효과 등)
 .cursor {
-  display: inline-block; /* 인라인 블록으로 설정 */
-  animation: blink 0.7s step-end infinite; /* 깜빡이는 애니메이션 설정 */
-}
-
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+} */
+ 
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-/* 헤더가 숨겨질 때 적용될 클래스 */
-.scrollDown {
-transform: translateY(-100%); /* 헤더를 위로 숨기기 */
-transition: transform 0.3s ease; /* 부드러운 이동 효과 */
-}
-
-/* 프로필 이미지*/
-.profile-image {
-  width: 150px; /* 필요에 따라 크기 조정 */
-  height: auto;
-  margin-left: 8%; 
-  border-radius: 3%; /* 원형으로 표시 */
-}
-
-.intro-section {
-  background-color: #eff3fb;
-}
-
-/* 연락처 */
-.contact-info {
-  display: flex;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬 */
-  gap: 10px; /* 아이콘과 텍스트 간의 간격 조절 */
-}
-
-.contact-info p {
-  margin: 0; /* 기본 마진 제거 */
-}
-
-
-/**********************
-      body 부분 
-  *********************/
-
-/* 전체 배경색 설정 */
-body {
-    background-color: #eff3fb;
-  }
-
-
-/* 메인 부분에 헤더 높이만큼 여백 추가 (header랑 겹치지 않게 해줌)*/
-.main-content {
-  margin-top: 400px; 
-  margin-left: 10%;
-}
-  
-
-
-/* 폰트 지정 : 프리젠테이션체 (https://noonnu.cc/font_page/1369#google_vignette) */
-@font-face {
-    font-family: 'Freesentation-9Black';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-}
-
-
-.intro-section {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.intro-text {
-  font-size: 1.1em;
-}
-
-.intro-text h2 {
-  margin-bottom: 15px;
-  font-weight: 800;
-}
-
-.intro-text p {
-  margin: 5px 0;
-}
-
-.education-info {
-  display: flex;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  align-items: center; /* 아이콘과 텍스트를 수직 가운데 정렬 */
-  gap: 10px; /* 아이콘과 텍스트 간의 간격 조절 */
-}
-
-
-.section-title::before {
-  content: "|";         /* | 기호를 삽입 */
-  margin-right: 8px;    /* 텍스트와의 간격 조절 */
-  color: rgb(140, 136, 136);          /* | 기호 색상 */
-  font-size: 26px;      /* 기호 크기 (텍스트와 동일하게 설정) */
-}
-
-
-.section {
-  margin-bottom: 50px;
-}
-
-.skills-name {
-  margin-left: 10px;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.skills-info {
-  margin-left: 20px;
-}
-
-
-/* 표 */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-.contact-info a {
-  text-decoration: none;
-}
