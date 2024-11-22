@@ -20,8 +20,8 @@
     <!-- main content -->
     <main class="main-content">
       <!-- INTRO -->
-      <div id="section-1" class="section">
-        <span id="target">안녕하세요, 데이터 분석가를 희망하는 고태경입니다.</span>
+      <div id="section-0" class="section">
+        <span id="target" class="introduce">안녕하세요, 데이터 분석가를 희망하는 고태경입니다.</span>
         <span class="cursor">|</span> 
         <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'cake-candles']" />
@@ -45,7 +45,7 @@
       <!-- 학력 -->
       <div id="section-1" class="section">
         <div class="intro-text">
-          <h2 class="section-title">학력</h2>
+          <h2 class="section-title">EDUCATION</h2>
         </div>
         <div class="education-info icon">
           <table>
@@ -80,7 +80,7 @@
       <!-- skills -->
       <div id="section-2" class="section">
         <div class="intro-text">
-          <h2 class="section-title">기술능력</h2>
+          <h2 class="section-title">SKILLS</h2>
         </div>
         <div class="skills-name">
           <span>python</span>
@@ -273,31 +273,10 @@
 <script>
 export default {
   name: 'App',
-  directives: {
-    typing: {
-      mounted(el, binding) {
-        // CDN에서 불러온 TypeHangul 사용
-        const text = binding.value;
-        const delay = parseInt(el.dataset.delay) || 100; // 기본값을 100ms로 설정
-        let index = 0;
-        el.innerHTML = ''; // 텍스트 초기화
-
-        function typeWriter() {
-          if (index < text.length) {
-            el.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, delay); // 타이핑 효과
-          }
-        }
-
-        typeWriter();
-      }
-    }
-  },
   mounted() {
     // TypeHangul을 사용하여 타이핑 효과 적용
     if (window.TypeHangul) {
-      window.TypeHangul.type('#section-0', {
+      window.TypeHangul.type('#target', {
         speed: 100,  // 타이핑 속도
         cursor: true // 커서 활성화
       });
@@ -305,14 +284,14 @@ export default {
   },
   data() {
     return {
-      // 기존 데이터 설정
       isScrollDown: false,
       prevScrollTop: 0,
       currentTab: 0,
-      tabs: ['INTRO', '학력', '기술능력', '수상내역', '교내외 활동내역', '자격증', '프로젝트'],
+      tabs: ['ABOUT', 'EDUCATION', 'SKILLS', '수상내역', '교내외 활동내역', '자격증', '프로젝트'],
       navItems: [
-        { id: 'section-1', name: '학력' },
-        { id: 'section-2', name: '기술능력' },
+        { id: 'section-0', name: 'ABOUT' },
+        { id: 'section-1', name: 'EDUCATION' },
+        { id: 'section-2', name: 'SKILLS' },
         { id: 'section-3', name: '수상내역' },
         { id: 'section-4', name: '교내외 활동내역' },
         { id: 'section-5', name: '자격증' },
@@ -321,7 +300,6 @@ export default {
     };
   },
   methods: {
-    // 기존 메소드들
     handleScroll() {
       const nextScrollTop = window.pageYOffset || 0;
       if (nextScrollTop > this.prevScrollTop) {

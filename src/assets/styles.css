@@ -129,7 +129,13 @@ section p {
 }
 
 /* 타이핑 효과 */
+.introduce {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .cursor {
+  font-size: 30px;
   display: inline-block;
   animation: blink 0.7s step-end infinite;
 }
@@ -148,8 +154,8 @@ section p {
 }
 
 .contact-info.icon svg, .contact-info.icon img {
-  width: 40px;  /* 아이콘의 크기 */
-  height: 40px;
+  width: 20px;  /* 아이콘의 크기 */
+  height: 20px;
   border-radius: 50%;  /* 원 모양으로 만들기 */
   margin-right: 10px;  /* 아이콘과 텍스트 사이의 간격 */
   background-color: #f0f0f0;  /* 배경 색상 */
