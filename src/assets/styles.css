@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gmarket+Sans:wght@400;700&display=swap');
+
 /* 사이드바 스타일 */
 .sidebar {
   width: 210px; /* 사이드바 너비 */
@@ -117,6 +119,7 @@ th {
 
 /* 스크롤바 스타일 (필요한 경우) */
 body {
+  font-family: 'Roboto', sans-serif; /* 구글 웹폰트 적용 */
   background-color: #f7f8ff;
 }
 
@@ -125,11 +128,11 @@ section p {
   font-size: 1.1em;
 }
 
-/* 추가적인 스타일 (타이핑 효과 등)
+/* 타이핑 효과 */
 .cursor {
   display: inline-block;
   animation: blink 0.7s step-end infinite;
-} */
+}
  
 @keyframes blink {
   0% { opacity: 1; }
@@ -137,3 +140,23 @@ section p {
   100% { opacity: 1; }
 }
 
+/* info */
+.contact-info.icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info.icon svg, .contact-info.icon img {
+  width: 40px;  /* 아이콘의 크기 */
+  height: 40px;
+  border-radius: 50%;  /* 원 모양으로 만들기 */
+  margin-right: 10px;  /* 아이콘과 텍스트 사이의 간격 */
+  background-color: #f0f0f0;  /* 배경 색상 */
+  padding: 10px;  /* 여백을 주어 둥근 아이콘을 만들어줍니다 */
+}
+
+.contact-info.icon a {
+  text-decoration: none;
+  color: #333;  /* 링크 색상 */
+}

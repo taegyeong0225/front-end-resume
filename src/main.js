@@ -1,7 +1,10 @@
-// main.js
+/*  main.js */
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/styles.css';
+
+// 타이핑 효과
 import typingEffect from './directives/TypingEffect';
 
 // 폰트 어썸
