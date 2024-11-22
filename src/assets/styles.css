@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #edeff6;
+  background-color: #f1f3fa;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -129,14 +129,23 @@ section p {
 }
 
 /* 타이핑 효과 */
+.typing {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
 .introduce {
   font-size: 30px;
   font-weight: bold;
+  line-height: 1.5; /* 줄 간격 조정 */
+  margin-bottom: 20px;
 }
 
 .cursor {
   font-size: 30px;
-  display: inline-block;
+  line-height: 1.5; /* 커서도 동일한 줄 간격 설정 */
+  position: relative;
+  bottom: 0px; /* 커서 위치를 텍스트에 맞게 조정 */
   animation: blink 0.7s step-end infinite;
 }
  
@@ -147,6 +156,25 @@ section p {
 }
 
 /* info */
+.contact-icon {
+  margin-top: 15px;
+  margin-right: 20px; /* 아이콘 간의 오른쪽 간격 추가 */
+  display: inline-flex; /* 아이콘을 한 줄로 나열 */
+  align-items: center; /* 세로 정렬 */
+  transition: background-color 0.3s ease, color 0.3s ease; /* 배경색과 아이콘 색 변화에 트랜지션 효과 추가 */
+}
+
+.contact-icon svg {
+  width: 40px; /* 아이콘 크기 */
+  height: 40px; /* 아이콘 크기 */
+  fill: #000000; /* 기본 아이콘 색 */
+  transition: fill 0.3s ease; /* 색 변화에 트랜지션 효과 추가 */
+}
+
+.contact-icon:hover svg {
+  fill: #9595f9; /* 호버 시 아이콘 색 변경 */
+}
+
 .contact-info.icon {
   display: flex;
   align-items: center;
@@ -158,7 +186,7 @@ section p {
   height: 20px;
   border-radius: 50%;  /* 원 모양으로 만들기 */
   margin-right: 10px;  /* 아이콘과 텍스트 사이의 간격 */
-  background-color: #f0f0f0;  /* 배경 색상 */
+  background-color: #e1e5fc;  /* 배경 색상 */
   padding: 10px;  /* 여백을 주어 둥근 아이콘을 만들어줍니다 */
 }
 
