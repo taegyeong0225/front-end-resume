@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gmarket+Sans:wght@400;700&display=swap');
 
-/* 사이드바 스타일 */
+/************************
+      사이드바 스타일
+ ************************/
 .sidebar {
   width: 210px; /* 사이드바 너비 */
   height: 100vh; /* 화면 전체 높이 */
@@ -12,18 +14,37 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 0; /* 불필요한 마진 제거 */
   z-index: 100; /* 사이드바가 다른 콘텐츠 위에 보이도록 설정 */
+}
+
+.sidebar .profile img {
+  width: 130px;
+  height: 170px; /* 이미지 크기 고정 */
+  border-radius: 50%; /* 원형 이미지 */
+}
+
+/* 네비게이션 링크 스타일 */
+nav ul li a {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #555; /* 항목 사이에 구분선 추가 */
+}
+
+nav ul li a:hover {
+  background-color: #444; /* 호버 시 배경색 변경 */
+}
+
+/* 프로필 이미지 */
+.profile-image {
+  width: 150px; /* 프로필 이미지 크기 */
+  height: auto;
+  margin-left: 8%;
+  border-radius: 50%; /* 원형 이미지 */
 }
 
 .sidebar .profile {
   text-align: center;
   margin-top: 40px; /* 증명사진 위에 여백 */
-}
-
-.sidebar .profile img {
-  width: 130px;
-  border-radius: 10%;
 }
 
 /* 네비게이션이 사이드바의 상단에 위치하도록 추가 */
@@ -62,17 +83,27 @@
   transition: transform 0.3s ease, background-color 0.3s ease; /* 배경 색상 및 크기 변경에 부드러운 효과 추가 */
 }
 
-/* 본문 콘텐츠 스타일 */
-.main-content {
+/************************
+      본문 콘텐츠 스타일
+ ************************/
+.main-content { 
   margin-left: 260px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
-  padding: 20px;
-  width: calc(100% - 250px); /* 사이드바를 제외한 나머지 공간을 차지 */
+  width: calc(100% - 260px); /* 사이드바를 제외한 나머지 공간을 차지 */
+  overflow: hidden; /* 콘텐츠가 넘치는 경우 숨김 처리 */
 }
 
 .section {
-  padding: 20px;
-  margin: 40px 0;
-  overflow: hidden;
+  height: 100vh; /* 각 섹션을 화면 크기만큼 설정 */
+  width: 100%;
+  padding-top: 20vh; /* 섹션 위쪽 여백 */
+  padding-left: 10vh; /* 섹션 왼쪽 여백 */
+  display: block; /* 기본적으로 섹션은 보이도록 */
+  transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.section.hidden {
+  opacity: 0; /* 숨겨진 섹션을 투명하게 처리 */
+  pointer-events: none; /* 클릭 이벤트 비활성화 */
 }
 
 /* 각 섹션 스타일 */
@@ -81,24 +112,6 @@ section h2 {
   margin-bottom: 10px;
 }
 
-/* 네비게이션 링크 스타일 */
-nav ul li a {
-  display: block;
-  padding: 10px 0;
-  border-bottom: 1px solid #555; /* 항목 사이에 구분선 추가 */
-}
-
-nav ul li a:hover {
-  background-color: #444; /* 호버 시 배경색 변경 */
-}
-
-/* 프로필 이미지 */
-.profile-image {
-  width: 150px; /* 프로필 이미지 크기 */
-  height: auto;
-  margin-left: 8%;
-  border-radius: 50%; /* 원형 이미지 */
-}
 
 /* 표 스타일 */
 table {
