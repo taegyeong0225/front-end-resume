@@ -44,8 +44,7 @@
           <span>인하공업전문대학 컴퓨터정보공학과 (3년제 전문대학 졸업 예정)</span>
         </div>
         <div class="education">
-          <p>4.01 / 4.5</p>
-          <p>2022.02 ~ 2025.02 (2025년 졸업 예정)</p>
+          <p>4.01 / 4.5 &nbsp; | &nbsp;2022.02 ~ 2025.02</p>
         </div>
         <div class="contact-icon">
           <a href="https://github.com/taegyeong0225" target="_blank">
@@ -69,127 +68,128 @@
         </div>
 
         <h2>main skills</h2>
-      <!-- Skills Table -->
-      <table class="skills-table">
-        <tbody>
-          <!-- Python Skill -->
-          <tr>
-            <td><img src="https://static.cdnlogo.com/logos/p/3/python.svg" width="50"></td>
-            <td>Python</td>
-            <td>
-              <p>
-                웹 크롤링을 통한 데이터 수집, Matplotlib, Seaborn 등 라이브러리를 통한 데이터 시각화 <br>
-                django 프레임워크를 통한 CRUD 구현 및 ajax를 이용한 비동기식 처리
-              </p>
-              <progress class="progress" value="80" max="100"></progress>
-              <span class="progress-text">80%</span>
-            </td>
-          </tr>
+        <!-- Skills Table -->
+        <table class="skills-table">
+            <tbody>
+              <!-- Python Skill -->
+              <tr>
+                <td><img src="https://static.cdnlogo.com/logos/p/3/python.svg" width="50"></td>
+                <td>Python</td>
+                <td>
+                  <p>
+                    웹 크롤링을 통한 데이터 수집, Matplotlib, Seaborn 등 라이브러리를 통한 데이터 시각화 <br>
+                    django 프레임워크를 통한 CRUD 구현 및 ajax를 이용한 비동기식 처리
+                  </p>
+                  <progress class="progress" value="80" max="100"></progress>
+                  <span class="progress-text">80%</span>
+                </td>
+              </tr>
 
-          <!-- MySQL Skill -->
-          <tr>
-            <td><img src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" alt="mysql" width="60"/></td>
-            <td>MySQL</td>
-            <td>
-              <p>DDL/DML/DCL문 작성</p>
-              <progress class="progress" value="80" max="100"></progress>
-              <span class="progress-text">80%</span>
-            </td>
-          </tr>
+              <!-- MySQL Skill -->
+              <tr>
+                <td><img src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" alt="mysql" width="60"/></td>
+                <td>MySQL</td>
+                <td>
+                  <p>DDL/DML/DCL문 작성</p>
+                  <progress class="progress" value="80" max="100"></progress>
+                  <span class="progress-text">80%</span>
+                </td>
+              </tr>
 
-          <!-- Oracle Skill -->
-          <tr>
-            <td><img src="https://seekvectorlogo.com/wp-content/uploads/2017/12/oracle-vector-logo.png" height="45"/></td>
-            <td>Oracle</td>
-            <td>
-              <p>DDL/DML/DCL 작성 <br> PL/SQL 작성</p>
-              <progress class="progress" value="75" max="100"></progress>
-              <span class="progress-text">75%</span>
-            </td>
-          </tr>
+              <!-- Oracle Skill -->
+              <tr>
+                <td><img src="https://seekvectorlogo.com/wp-content/uploads/2017/12/oracle-vector-logo.png" height="45"/></td>
+                <td>Oracle</td>
+                <td>
+                  <p>DDL/DML/DCL 작성 <br> PL/SQL 작성</p>
+                  <progress class="progress" value="75" max="100"></progress>
+                  <span class="progress-text">75%</span>
+                </td>
+              </tr>
 
-          <!-- Power BI Skill -->
-          <tr>
-            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png?20210102182532" width="60"/></td>
-            <td>Power BI</td>
-            <td>
-              <p>쿼리 편집기를 통해 요구 사항에 맞게 데이터를 전처리 및 시각화</p>
-              <progress class="progress" value="70" max="100"></progress>
-              <span class="progress-text">70%</span>
-            </td>
-          </tr>
+              <!-- Power BI Skill -->
+              <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png?20210102182532" width="60"/></td>
+                <td>Power BI</td>
+                <td>
+                  <p>쿼리 편집기를 통해 요구 사항에 맞게 데이터를 전처리 및 시각화</p>
+                  <progress class="progress" value="70" max="100"></progress>
+                  <span class="progress-text">70%</span>
+                </td>
+              </tr>
 
-          <!-- Java Skill -->
-          <tr>
-            <td><img src="https://static.cdnlogo.com/logos/j/86/java.svg" width="60"></td>
-            <td>Java</td>
-            <td>
-              <p>spring 프레임워크를 통한 CRUD 구현</p>
-              <progress class="progress" value="75" max="100"></progress>
-              <span class="progress-text">75%</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <!-- Java Skill -->
+              <tr>
+                <td><img src="https://static.cdnlogo.com/logos/j/86/java.svg" width="60"></td>
+                <td>Java</td>
+                <td>
+                  <p>spring 프레임워크를 통한 CRUD 구현</p>
+                  <progress class="progress" value="75" max="100"></progress>
+                  <span class="progress-text">75%</span>
+                </td>
+              </tr>
+            </tbody>
+        </table>
 
 
-      <!-- Framework & Tools Table -->
-      <h2>Framework & Tools</h2>
-      <table class="tools-table">
-        <tbody>
-          <!-- Git -->
-          <tr>
-            <td><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="60"></td>
-            <td>Git</td>
-            <td>
-              <p>버전 관리 도구, 분산형 개발 시스템</p>
-              <progress class="progress" value="70" max="100"></progress>
-              <span class="progress-text">70%</span>
-            </td>
-          </tr>
-          <!-- Vue.js -->
-          <tr>
-            <td><img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg" alt="vue" width="60"></td>
-            <td>Vue.js</td>
-            <td>
-              <p>프론트엔드 웹 애플리케이션을 위한 프로그레시브 프레임워크</p>
-              <progress class="progress" value="60" max="100"></progress>
-              <span class="progress-text">60%</span>
-            </td>
-          </tr>
+        <!-- Framework & Tools Table -->
+        <h2>Framework & Tools</h2>
+        <table class="skills-table">
+            <tbody>
+              <!-- Git -->
+              <tr>
+                <td><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="90" height="50"></td>
+                <td>Git</td>
+                <td>
+                  <p>버전 관리 도구, 분산형 개발 시스템</p>
+                  <progress class="progress" value="70" max="100"></progress>
+                  <span class="progress-text">70%</span>
+                </td>
+              </tr>
+              <!-- Vue.js -->
+              <tr>
+                <td><img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg" alt="vue" width="80" height="60"></td>
+                <td>Vue.js</td>
+                <td>
+                  <p>프론트엔드 웹 애플리케이션을 위한 프로그레시브 프레임워크</p>
+                  <progress class="progress" value="60" max="100"></progress>
+                  <span class="progress-text">60%</span>
+                </td>
+              </tr>
 
-          <!-- Spring -->
-          <tr>
-            <td><img src="https://www.vectorlogo.zone/logos/springio/springio-ar21.svg" alt="spring" width="60"></td>
-            <td>Spring</td>
-            <td>
-              <p>자바 기반의 엔터프라이즈 애플리케이션 프레임워크</p>
-              <progress class="progress" value="75" max="100"></progress>
-              <span class="progress-text">75%</span>
-            </td>
-          </tr>
+              <!-- Spring -->
+              <tr>
+                <td><img src="https://www.vectorlogo.zone/logos/springio/springio-ar21.svg" alt="spring" width="80" height="50"></td>
+                <td>Spring</td>
+                <td>
+                  <p>자바 기반의 엔터프라이즈 애플리케이션 프레임워크</p>
+                  <progress class="progress" value="75" max="100"></progress>
+                  <span class="progress-text">75%</span>
+                </td>
+              </tr>
 
-          <!-- Django -->
-          <tr>
-            <td><img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="spring" width="60"></td>
-            <td>Django</td>
-            <td>
-              <p>파이썬 기반의 고급 웹 프레임워크</p>
-              <progress class="progress" value="80" max="100"></progress>
-              <span class="progress-text">80%</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <!-- Django -->
+              <tr>
+                <td><img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="spring" width="80" height="50"></td>
+                <td>Django</td>
+                <td>
+                  <p>파이썬 기반의 고급 웹 프레임워크</p>
+                  <progress class="progress" value="80" max="100"></progress>
+                  <span class="progress-text">80%</span>
+                </td>
+              </tr>
+            </tbody>
+        </table>
 
       </div>
-
-      <!-- 수상내역 -->
+      <!-- portfolio -->
       <div id="section-2" class="section">
         <div class="intro-text">
-          <h2 class="section-title">수상내역</h2>
+          <h2 class="section-title">PORTFOLIO</h2>
         </div>
-        <div class="awards-info icon">
+
+        <h2>수상내역</h2>
+        <div class="awards-info">
           <table>
             <thead>
               <tr>
@@ -242,13 +242,9 @@
             </tbody>
           </table>
         </div>
-      </div>
-      <!-- 활동내역 -->
-      <div id="section-3" class="section">
-        <div class="intro-text">
-          <h2 class="section-title">교내외 활동내역</h2>
-        </div>
-        <div class="awards-info icon">
+        
+        <h2>교내외 활동내역</h2>
+        <div class="awards-info">
           <table>
             <thead>
               <tr>
@@ -264,28 +260,13 @@
                 <td>네이버 커넥트재단</td>
               </tr>
               <tr>
+                <td>2024.04.01~2024.06.03</td>
+                <td>2024 FLY 튜터링(1)</td>
+                <td>인하공업전문대학</td>
+              </tr>
+              <tr>
                 <td>2023.04.04~2023.06.03</td>
                 <td>2023 SOC 들어오는 노트 공모전</td>
-                <td>인하공업전문대학</td>
-              </tr>
-              <tr>
-                <td>2023.08.25</td>
-                <td>3–In 인증</td>
-                <td>인하공업전문대학</td>
-              </tr>
-              <tr>
-                <td>2023.08.03</td>
-                <td>2023 FLY 튜터링(1) 우수발표팀 (금상)</td>
-                <td>인하공업전문대학</td>
-              </tr>
-              <tr>
-                <td>2023.06.22</td>
-                <td>2023 WOW(World Of Wisdom) 캠프(1) (은상)</td>
-                <td>인하공업전문대학</td>
-              </tr>
-              <tr>
-                <td>2023.06.01</td>
-                <td>제 20 회 독후감경진대회 (장려상)</td>
                 <td>인하공업전문대학</td>
               </tr>
               <tr>
@@ -301,13 +282,9 @@
             </tbody>
           </table>
         </div>
-      </div>
-      <!-- 자격증 -->
-      <div id="section-4" class="section">
-        <div class="intro-text">
-          <h2 class="section-title">자격증</h2>
-        </div>
-        <div class="education-info icon">
+
+        <h2>자격증</h2>
+        <div class="education-info">
           <table>
             <thead>
               <tr>
@@ -331,8 +308,9 @@
           </table>
         </div>
       </div>
+
       <!-- project 이력 -->
-      <div id="section-5" class="section">
+      <div id="section-3" class="section">
         <div class="intro-text">
           <h2 class="section-title">프로젝트</h2>
         </div>

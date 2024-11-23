@@ -14,10 +14,8 @@ export default {
       navItems: [
         { id: 'section-0', name: 'ABOUT' },
         { id: 'section-1', name: 'SKILLS' },
-        { id: 'section-2', name: '수상내역' },
-        { id: 'section-3', name: '교내외 활동내역' },
-        { id: 'section-4', name: '자격증' },
-        { id: 'section-5', name: '프로젝트' }
+        { id: 'section-2', name: 'PORTFOLIO' },
+        { id: 'section-3', name: 'PROJECT' }
       ]
     };
   },

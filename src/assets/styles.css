@@ -95,9 +95,10 @@ nav ul li a:hover {
 .section {
   height: auto; /* 섹션 높이를 콘텐츠에 맞게 자동으로 조정 */
   width: 100%;
+  margin-top: 40px; /* 섹션 간 간격을 더 명확히 구분 */
   padding-top: 10vh; /* 섹션 위쪽 여백 */
   padding-left: 10vh; /* 섹션 왼쪽 여백 */
-  margin-bottom: 40px; /* 섹션 간의 간격을 더 넓게 설정 */
+  margin-bottom: 70px; /* 섹션 간의 간격을 더 넓게 설정 */
   display: block; /* 기본적으로 섹션은 보이도록 */
   transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
 }
@@ -112,22 +113,6 @@ nav ul li a:hover {
 .section-title {
   margin-bottom: 60px;  
   font-size: 2em;
-}
-
-/* 표 스타일 */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #ddd; /* 테이블 셀에 구분선 추가 */
-}
-
-th {
-  background-color: #f4f4f4; /* 헤더 배경색 */
 }
 
 /* 스크롤바 스타일 (필요한 경우) */
@@ -171,6 +156,10 @@ section p {
 /************************
           about
  ************************/
+#section-0 {
+  margin-bottom: 200px; /* about 섹션과 다른 섹션 사이의 여백 추가 */
+}
+
  .contact-info {
   margin-bottom: 15px !important; /* 각 항목 사이에 여백 추가 */
 }
@@ -284,10 +273,27 @@ progress::-webkit-progress-value {
   display: inline-block; /* 텍스트가 다른 요소와 함께 표시되도록 */
 }
 
+/* 표 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto; /* 스크롤이 생기게 하는 속성 */
+  display: block; /* 테이블을 블록 요소로 설정하여 스크롤 가능하게 함 */
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd; /* 테이블 셀에 구분선 추가 */
+}
+
+th {
+  background-color: #f4f4f4; /* 헤더 배경색 */
+}
+
 /* 테이블 아래 여백을 추가 */
-.skills-table, .tool-table {
+.skills-table {
   margin-bottom: 40px !important; /* 여백 강제 적용 */
   display: block; /* 테이블을 블록 요소로 처리 */
   width: 100%; /* 너비를 100%로 설정 */
-  overflow: hidden; /* 내용이 넘칠 경우 숨기기 */
 }
