@@ -19,7 +19,7 @@
     </div>
     <!-- main content -->
     <main class="main-content">
-      <!-- INTRO -->
+      <!-- about -->
       <div id="section-0" class="section">
         <span id="target" class="introduce typing">안녕하세요, 데이터 분석가를 희망하는 고태경입니다.</span>
         <span class="cursor typing">|</span> 
@@ -32,16 +32,20 @@
           <span>010-2987-5082</span>
         </div>
         <div class="contact-info icon">
+          <font-awesome-icon :icon="['fas', 'envelope']" />
+          <span>202244042@itc.ac.kr</span>
+        </div>
+        <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'house']" />
           <span>인천광역시 서구 마전동</span>
         </div>
         <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'school']" />
-          <span>인하공업전문대학 컴퓨터정보공학과</span>
+          <span>인하공업전문대학 컴퓨터정보공학과 (3년제 전문대학 졸업 예정)</span>
         </div>
-        <div class="contact-info icon">
-          <font-awesome-icon :icon="['fas', 'envelope']" />
-          <span>202244042@itc.ac.kr</span>
+        <div class="education">
+          <p>4.01 / 4.5</p>
+          <p>2022.02 ~ 2025.02 (2025년 졸업 예정)</p>
         </div>
         <div class="contact-icon">
           <a href="https://github.com/taegyeong0225" target="_blank">
@@ -58,76 +62,130 @@
           </a>
         </div>
       </div>
-      <!-- 학력 -->
-      <div id="section-1" class="section">
-        <div class="intro-text">
-          <h2 class="section-title">EDUCATION</h2>
-        </div>
-        <div class="education-info icon">
-          <table>
-            <thead>
-              <tr>
-                <th>기간</th>
-                <th>구분</th>
-                <th>학교명</th>
-                <th>전공</th>
-                <th>학점</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>22.02.28~24.02.15</td>
-                <td>전문대학(재학)</td>
-                <td>인하공업전문대학</td>
-                <td>컴퓨터정보공학과</td>
-                <td>4.01 / 4.5</td>
-              </tr>
-              <tr>
-                <td>19.03.02~22.02.15</td>
-                <td>고등학교(졸업)</td>
-                <td>검단고등학교</td>
-                <td>이공계열</td>
-                <td>-</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
       <!-- skills -->
-      <div id="section-2" class="section">
+      <div id="section-1" class="section">
         <div class="intro-text">
           <h2 class="section-title">SKILLS</h2>
         </div>
-        <div class="skills-name">
-          <span>python</span>
-        </div>
-        <div class="skills-info">
-          <p>
-            웹 크롤링을 통한 데이터 수집, Matplotlib, Seaborn 등 라이브러리를 통한 데이터 시각화 <br>
-            django 프레임워크를 통한 CRUD 구현 및 ajax를 이용한 비동기식 처리
-          </p>
-        </div>
-        <div class="skills-name">
-          <span>MySql</span>
-        </div>
-        <div class="skills-info">
-          <p>DDL/DML/DCL문 작성</p>
-        </div>
-        <div class="skills-name">
-          <span>Oracle</span>
-        </div>
-        <div class="skills-info">
-          <p>DDL/DML/DCL 작성 <br> PL/SQL 작성</p>
-        </div>
-        <div class="skills-name">
-          <span>Power Bi</span>
-        </div>
-        <div class="skills-info">
-          <p>쿼리 편집기를 통해 요구 사항에 맞게 데이터를 전처리 및 시각화</p>
-        </div>
+
+        <h2>main skills</h2>
+      <!-- Skills Table -->
+      <table class="skills-table">
+        <tbody>
+          <!-- Python Skill -->
+          <tr>
+            <td><img src="https://static.cdnlogo.com/logos/p/3/python.svg" width="50"></td>
+            <td>Python</td>
+            <td>
+              <p>
+                웹 크롤링을 통한 데이터 수집, Matplotlib, Seaborn 등 라이브러리를 통한 데이터 시각화 <br>
+                django 프레임워크를 통한 CRUD 구현 및 ajax를 이용한 비동기식 처리
+              </p>
+              <progress class="progress" value="80" max="100"></progress>
+              <span class="progress-text">80%</span>
+            </td>
+          </tr>
+
+          <!-- MySQL Skill -->
+          <tr>
+            <td><img src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" alt="mysql" width="60"/></td>
+            <td>MySQL</td>
+            <td>
+              <p>DDL/DML/DCL문 작성</p>
+              <progress class="progress" value="80" max="100"></progress>
+              <span class="progress-text">80%</span>
+            </td>
+          </tr>
+
+          <!-- Oracle Skill -->
+          <tr>
+            <td><img src="https://seekvectorlogo.com/wp-content/uploads/2017/12/oracle-vector-logo.png" height="45"/></td>
+            <td>Oracle</td>
+            <td>
+              <p>DDL/DML/DCL 작성 <br> PL/SQL 작성</p>
+              <progress class="progress" value="75" max="100"></progress>
+              <span class="progress-text">75%</span>
+            </td>
+          </tr>
+
+          <!-- Power BI Skill -->
+          <tr>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png?20210102182532" width="60"/></td>
+            <td>Power BI</td>
+            <td>
+              <p>쿼리 편집기를 통해 요구 사항에 맞게 데이터를 전처리 및 시각화</p>
+              <progress class="progress" value="70" max="100"></progress>
+              <span class="progress-text">70%</span>
+            </td>
+          </tr>
+
+          <!-- Java Skill -->
+          <tr>
+            <td><img src="https://static.cdnlogo.com/logos/j/86/java.svg" width="60"></td>
+            <td>Java</td>
+            <td>
+              <p>spring 프레임워크를 통한 CRUD 구현</p>
+              <progress class="progress" value="75" max="100"></progress>
+              <span class="progress-text">75%</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!-- Framework & Tools Table -->
+      <h2>Framework & Tools</h2>
+      <table class="tools-table">
+        <tbody>
+          <!-- Git -->
+          <tr>
+            <td><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="git" width="60"></td>
+            <td>Git</td>
+            <td>
+              <p>버전 관리 도구, 분산형 개발 시스템</p>
+              <progress class="progress" value="70" max="100"></progress>
+              <span class="progress-text">70%</span>
+            </td>
+          </tr>
+          <!-- Vue.js -->
+          <tr>
+            <td><img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg" alt="vue" width="60"></td>
+            <td>Vue.js</td>
+            <td>
+              <p>프론트엔드 웹 애플리케이션을 위한 프로그레시브 프레임워크</p>
+              <progress class="progress" value="60" max="100"></progress>
+              <span class="progress-text">60%</span>
+            </td>
+          </tr>
+
+          <!-- Spring -->
+          <tr>
+            <td><img src="https://www.vectorlogo.zone/logos/springio/springio-ar21.svg" alt="spring" width="60"></td>
+            <td>Spring</td>
+            <td>
+              <p>자바 기반의 엔터프라이즈 애플리케이션 프레임워크</p>
+              <progress class="progress" value="75" max="100"></progress>
+              <span class="progress-text">75%</span>
+            </td>
+          </tr>
+
+          <!-- Django -->
+          <tr>
+            <td><img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="spring" width="60"></td>
+            <td>Django</td>
+            <td>
+              <p>파이썬 기반의 고급 웹 프레임워크</p>
+              <progress class="progress" value="80" max="100"></progress>
+              <span class="progress-text">80%</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
       </div>
+
       <!-- 수상내역 -->
-      <div id="section-3" class="section">
+      <div id="section-2" class="section">
         <div class="intro-text">
           <h2 class="section-title">수상내역</h2>
         </div>
@@ -186,7 +244,7 @@
         </div>
       </div>
       <!-- 활동내역 -->
-      <div id="section-4" class="section">
+      <div id="section-3" class="section">
         <div class="intro-text">
           <h2 class="section-title">교내외 활동내역</h2>
         </div>
@@ -245,7 +303,7 @@
         </div>
       </div>
       <!-- 자격증 -->
-      <div id="section-5" class="section">
+      <div id="section-4" class="section">
         <div class="intro-text">
           <h2 class="section-title">자격증</h2>
         </div>
@@ -274,7 +332,7 @@
         </div>
       </div>
       <!-- project 이력 -->
-      <div id="section-6" class="section">
+      <div id="section-5" class="section">
         <div class="intro-text">
           <h2 class="section-title">프로젝트</h2>
         </div>

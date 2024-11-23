@@ -10,15 +10,14 @@ export default {
       isScrollDown: false,
       prevScrollTop: 0,
       currentTab: 0,
-      tabs: ['ABOUT', 'EDUCATION', 'SKILLS', '수상내역', '교내외 활동내역', '자격증', '프로젝트'],
+      tabs: ['ABOUT', 'SKILLS', '수상내역', '교내외 활동내역', '자격증', '프로젝트'],
       navItems: [
         { id: 'section-0', name: 'ABOUT' },
-        { id: 'section-1', name: 'EDUCATION' },
-        { id: 'section-2', name: 'SKILLS' },
-        { id: 'section-3', name: '수상내역' },
-        { id: 'section-4', name: '교내외 활동내역' },
-        { id: 'section-5', name: '자격증' },
-        { id: 'section-6', name: '프로젝트' }
+        { id: 'section-1', name: 'SKILLS' },
+        { id: 'section-2', name: '수상내역' },
+        { id: 'section-3', name: '교내외 활동내역' },
+        { id: 'section-4', name: '자격증' },
+        { id: 'section-5', name: '프로젝트' }
       ]
     };
   },

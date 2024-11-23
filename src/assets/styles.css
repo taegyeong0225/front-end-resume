@@ -89,13 +89,13 @@ nav ul li a:hover {
 .main-content { 
   margin-left: 260px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
   width: calc(100% - 260px); /* 사이드바를 제외한 나머지 공간을 차지 */
-  overflow: hidden; /* 콘텐츠가 넘치는 경우 숨김 처리 */
+  overflow: hidden;
 }
 
 .section {
   height: 100vh; /* 각 섹션을 화면 크기만큼 설정 */
   width: 100%;
-  padding-top: 20vh; /* 섹션 위쪽 여백 */
+  padding-top: 10vh; /* 섹션 위쪽 여백 */
   padding-left: 10vh; /* 섹션 왼쪽 여백 */
   display: block; /* 기본적으로 섹션은 보이도록 */
   transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
@@ -107,11 +107,11 @@ nav ul li a:hover {
 }
 
 /* 각 섹션 스타일 */
-section h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
 
+.section-title {
+  margin-bottom: 60px;  
+  font-size: 2em;
+}
 
 /* 표 스타일 */
 table {
@@ -132,7 +132,7 @@ th {
 /* 스크롤바 스타일 (필요한 경우) */
 body {
   font-family: 'Roboto', sans-serif; /* 구글 웹폰트 적용 */
-  background-color: #f7f8ff;
+  /* background-color: #f7f8ff; */
 }
 
 section p {
@@ -167,7 +167,13 @@ section p {
   100% { opacity: 1; }
 }
 
-/* info */
+/************************
+          about
+ ************************/
+ .contact-info {
+  margin-bottom: 15px !important; /* 각 항목 사이에 여백 추가 */
+}
+
 .contact-icon {
   margin-top: 20px;
   margin-left: 1px;
@@ -206,4 +212,82 @@ section p {
 .contact-info.icon a {
   text-decoration: none;
   color: #333;  /* 링크 색상 */
+}
+
+.education {
+  margin-left: 50px;
+  color: #6e6e6e;
+}
+
+/************************
+        skills
+ ************************/
+/* Skills 항목 스타일 */
+.skill-item {
+  display: flex;
+  align-items: center;  /* 세로 정렬 */
+  margin-bottom: 30px;
+  justify-content: space-between; /* 스킬 이름과 설명을 양쪽에 배치 */
+}
+
+/* 이미지와 텍스트 사이 간격 */
+.skill-item img {
+  margin-right: 20px; /* 이미지와 텍스트 사이 여백 */
+}
+
+/* 스킬 이름 스타일 */
+.skills-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px; /* 스킬 이름과 그 아래 내용 간 간격 */
+}
+
+/* 스킬 정보 */
+.skills-info {
+  font-size: 14px;
+  margin-bottom: 10px; /* 진행 바와 텍스트 간 간격 */
+  flex: 3; /* 스킬 정보의 공간을 적당히 늘림 */
+}
+
+/* 진행 바 컨테이너 */
+.progress-container {
+  display: flex;
+  align-items: center; /* 세로 정렬 */
+  width: 100%; /* 100% 너비 */
+  gap: 10px; /* 진행 바와 텍스트 사이의 간격 */
+}
+
+/* 진행 바 스타일 */
+progress {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  width: 80%; /* 진행 바의 너비를 조정 */
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #5b52dc;
+  border-radius: 10px;
+}
+
+.progress-text {
+  font-size: 14px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #4c4c4c; /* 진행률 텍스트 색상 */
+  display: inline-block; /* 텍스트가 다른 요소와 함께 표시되도록 */
+}
+
+.skills-table {
+  margin-bottom: 20px; /* 테이블 아래 여백 추가 */
+}
+
+/* 테이블과 다른 요소 사이에 여백 추가 */
+.tool-table {
+  margin-bottom: 40px; /* 테이블 하단에 여백 */
 }
