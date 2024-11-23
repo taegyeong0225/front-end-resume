@@ -32,6 +32,10 @@
           <span>010-2987-5082</span>
         </div>
         <div class="contact-info icon">
+          <font-awesome-icon :icon="['fas', 'house']" />
+          <span>인천광역시 서구 마전동</span>
+        </div>
+        <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'school']" />
           <span>인하공업전문대학 컴퓨터정보공학과</span>
         </div>
@@ -283,54 +287,9 @@
 </template>
 
 <script>
+import appScript from './scripts/app';
+
 export default {
-  name: 'App',
-  mounted() {
-    // TypeHangul을 사용하여 타이핑 효과 적용
-    if (window.TypeHangul) {
-      window.TypeHangul.type('#target', {
-        speed: 100,  // 타이핑 속도
-        cursor: true, // 커서 활성화
-      });
-    }
-  },
-  data() {
-    return {
-      isScrollDown: false,
-      prevScrollTop: 0,
-      currentTab: 0,
-      tabs: ['ABOUT', 'EDUCATION', 'SKILLS', '수상내역', '교내외 활동내역', '자격증', '프로젝트'],
-      navItems: [
-        { id: 'section-0', name: 'ABOUT' },
-        { id: 'section-1', name: 'EDUCATION' },
-        { id: 'section-2', name: 'SKILLS' },
-        { id: 'section-3', name: '수상내역' },
-        { id: 'section-4', name: '교내외 활동내역' },
-        { id: 'section-5', name: '자격증' },
-        { id: 'section-6', name: '프로젝트' }
-      ]
-    };
-  },
-  methods: {
-    handleScroll() {
-      const nextScrollTop = window.pageYOffset || 0;
-      if (nextScrollTop > this.prevScrollTop) {
-        this.isScrollDown = true;
-      } else if (nextScrollTop < this.prevScrollTop) {
-        this.isScrollDown = false;
-      }
-      this.prevScrollTop = nextScrollTop;
-    },
-    scrollToSection(id) {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    tabnav(index) {
-      this.currentTab = index;
-      this.scrollToSection(this.navItems[index].id);
-    }
-  }
+  ...appScript,
 };
 </script>

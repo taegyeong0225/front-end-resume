@@ -64,7 +64,6 @@
 
 /* 본문 콘텐츠 스타일 */
 .main-content {
-  margin-top: 70px;
   margin-left: 260px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
   padding: 20px;
   width: calc(100% - 250px); /* 사이드바를 제외한 나머지 공간을 차지 */
@@ -157,7 +156,8 @@ section p {
 
 /* info */
 .contact-icon {
-  margin-top: 15px;
+  margin-top: 20px;
+  margin-left: 1px;
   margin-right: 20px; /* 아이콘 간의 오른쪽 간격 추가 */
   display: inline-flex; /* 아이콘을 한 줄로 나열 */
   align-items: center; /* 세로 정렬 */
