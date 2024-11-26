@@ -96,9 +96,10 @@ nav ul li a:hover {
   height: auto; /* 섹션 높이를 콘텐츠에 맞게 자동으로 조정 */
   width: 100%;
   margin-top: 40px; /* 섹션 간 간격을 더 명확히 구분 */
-  padding-top: 10vh; /* 섹션 위쪽 여백 */
+  padding-top: 8vh; /* 섹션 위쪽 여백 */
   padding-left: 10vh; /* 섹션 왼쪽 여백 */
   margin-bottom: 70px; /* 섹션 간의 간격을 더 넓게 설정 */
+  margin-right: 20px;
   display: block; /* 기본적으로 섹션은 보이도록 */
   transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
 }
@@ -111,7 +112,7 @@ nav ul li a:hover {
 /* 각 섹션 스타일 */
 
 .section-title {
-  margin-bottom: 60px;  
+  margin-bottom: 40px;  
   font-size: 2em;
 }
 
@@ -275,10 +276,13 @@ progress::-webkit-progress-value {
 
 /* 표 스타일 */
 table {
-  width: 100%;
+  width: calc(100% - 20px); 
+  table-layout: auto; /* 고정된 레이아웃 사용, 셀 너비를 고르게 나누어줌 */ 
   border-collapse: collapse;
   overflow-x: auto; /* 스크롤이 생기게 하는 속성 */
   display: block; /* 테이블을 블록 요소로 설정하여 스크롤 가능하게 함 */
+  max-width: 100%; /* 부모 요소보다 커지지 않도록 제한 */
+  margin-right: 100px; 
 }
 
 th, td {
@@ -291,9 +295,7 @@ th {
   background-color: #f4f4f4; /* 헤더 배경색 */
 }
 
-/* 테이블 아래 여백을 추가 */
-.skills-table {
-  margin-bottom: 40px !important; /* 여백 강제 적용 */
-  display: block; /* 테이블을 블록 요소로 처리 */
-  width: 100%; /* 너비를 100%로 설정 */
+@media (max-width: 768px) {
+  /* 작은 화면에서는 텍스트 크기를 줄이고, 셀의 패딩도 조정 */ 
+ table { font-size: 14px; }
 }
