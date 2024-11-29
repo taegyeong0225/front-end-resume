@@ -314,8 +314,25 @@
         <div class="intro-text">
           <h2 class="section-title">프로젝트</h2>
         </div>
-        <div class="education-info icon">
-          <span> 프로젝트 !! </span>
+        <div class="project-info icon">
+          <div class="projects">
+            <!-- v-for로 프로젝트 데이터를 순회 -->
+            <div class="project-card" v-for="(project, index) in projects" :key="index">
+              <img :src="project.image" alt="Project Image" class="project-image" />
+              <div class="project-info">
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p class="project-summary">{{ project.summary }}</p>
+                <div class="tech-stack">
+                  <img
+                    v-for="(tech, techIndex) in project.techStack"
+                    :key="techIndex"
+                    :src="tech"
+                    class="tech-badge"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -324,6 +341,7 @@
 
 <script>
 import appScript from './scripts/app';
+
 
 export default {
   ...appScript,

@@ -15,3 +15,4 @@ library.add(fas);
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon); // 폰트어썸
 app.mount('#app')
+

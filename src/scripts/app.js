@@ -1,7 +1,7 @@
-// src/scripts/app.js
+// app.js
 
-import { handleScroll, scrollToSection } from './scroll'; // 스크롤 관련 함수들
-import { typingEffect } from './typing'; // 타이핑 효과 함수
+import { handleScroll, scrollToSection } from './scroll';
+import { typingEffect } from './typing';
 
 export default {
   name: 'App',
@@ -15,21 +15,63 @@ export default {
         { id: 'section-0', name: 'ABOUT' },
         { id: 'section-1', name: 'SKILLS' },
         { id: 'section-2', name: 'PORTFOLIO' },
-        { id: 'section-3', name: 'PROJECT' }
-      ]
+        { id: 'section-3', name: 'PROJECT' },
+      ],
+      projects: [
+        {
+          title: "Vue.js Portfolio",
+          summary: "Vue.js로 만든 개인 포트폴리오 웹사이트",
+          image: "https://via.placeholder.com/300",
+          techStack: [
+            "https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white",
+            "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+          ],
+        },
+        {
+          title: "Python Web Scraping",
+          summary: "Python을 이용한 웹 크롤링 프로젝트",
+          image: "https://via.placeholder.com/300",
+          techStack: [
+            "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
+            "https://img.shields.io/badge/BeautifulSoup-0084B3?style=for-the-badge&logo=python&logoColor=white",
+          ],
+        },
+        {
+          title: "React Dashboard",
+          summary: "React를 이용한 대시보드 프로젝트",
+          image: "https://via.placeholder.com/300",
+          techStack: [
+            "https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white",
+            "https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white",
+          ],
+        },
+        {
+          title: "Django REST API",
+          summary: "Django로 구현한 RESTful API 서버",
+          image: "https://via.placeholder.com/300",
+          techStack: [
+            "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white",
+            "https://img.shields.io/badge/REST-FF5733?style=for-the-badge&logo=rest&logoColor=white",
+          ],
+        },
+      ],
     };
   },
   mounted() {
-    // TypeHangul을 사용하여 타이핑 효과를 적용
-    if (window.TypeHangul) {
-      window.TypeHangul.type('#target', {
-        speed: 100,  // 타이핑 속도
-        cursor: true  // 커서 활성화
-      });
-    }
-    // 추가적으로 typingEffect를 사용
-    typingEffect();
-  },  
+    console.log("project content: ", this.projects);
+
+    this.$nextTick(() => {
+      if (window.TypeHangul) {
+        setTimeout(() => {
+          window.TypeHangul.type('#target', {
+            speed: 100,
+            cursor: true,
+          });
+        }, 200);
+      }
+      typingEffect();
+    });
+  },
   methods: {
     tabnav(index) {
       this.currentTab = index;
@@ -42,6 +84,6 @@ export default {
       const { isScrollDown, nextScrollTop } = handleScroll(this.prevScrollTop);
       this.isScrollDown = isScrollDown;
       this.prevScrollTop = nextScrollTop;
-    }
-  }
+    },
+  },
 };

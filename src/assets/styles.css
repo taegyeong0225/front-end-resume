@@ -299,3 +299,67 @@ th {
   /* 작은 화면에서는 텍스트 크기를 줄이고, 셀의 패딩도 조정 */ 
  table { font-size: 14px; }
 }
+
+
+/************************
+        projects
+ ************************/
+ .projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between; /* 여백을 균등 분배 */
+}
+
+.project-card {
+  flex: 1 1 calc(30% - 20px); /* 카드가 30% 너비를 차지하고, 여백 포함 */
+  max-width: 300px; /* 최대 너비를 설정 */
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-summary {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tech-badge {
+  width: 80px;
+  height: 25px;
+}
