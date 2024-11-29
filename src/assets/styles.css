@@ -277,30 +277,54 @@ progress::-webkit-progress-value {
 }
 
 /* 표 스타일 */
+/* 표 스타일 */
 table {
-  width: calc(100% - 20px); 
-  table-layout: auto; /* 고정된 레이아웃 사용, 셀 너비를 고르게 나누어줌 */ 
-  border-collapse: collapse;
-  overflow-x: auto; /* 스크롤이 생기게 하는 속성 */
-  display: block; /* 테이블을 블록 요소로 설정하여 스크롤 가능하게 함 */
-  max-width: 100%; /* 부모 요소보다 커지지 않도록 제한 */
-  margin-right: 100px; 
+  width: 100%; /* 테이블 전체 너비 */
+  border-collapse: collapse; /* 테두리 중첩 방지 */
+  margin: 20px 0; /* 위아래 여백 */
+  font-size: 16px; /* 기본 글꼴 크기 */
+  font-family: 'Arial', sans-serif; /* 세련된 글꼴 */
+  color: #333; /* 텍스트 색상 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  border-radius: 10px; /* 테두리를 둥글게 */
+  overflow: hidden; /* 테두리 안으로 내용 제한 */
 }
 
 th, td {
-  text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #ddd; /* 테이블 셀에 구분선 추가 */
+  padding: 12px 20px; /* 넉넉한 패딩 */
+  text-align: left; /* 텍스트 정렬 */
+  border-bottom: 1px solid #e0e0e0; /* 각 셀 구분선 */
 }
 
 th {
-  background-color: #f4f4f4; /* 헤더 배경색 */
+  background-color: #889eff; /* 헤더 배경색 */
+  color: white; /* 헤더 텍스트 색상 */
+  text-transform: uppercase; /* 헤더 텍스트 대문자 */
+  font-weight: bold; /* 굵은 텍스트 */
+  letter-spacing: 0.5px; /* 텍스트 간격 */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* 짝수 줄 배경색 */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* 마우스 호버 시 배경색 */
+}
+
+td {
+  color: #555; /* 셀 텍스트 색상 */
 }
 
 @media (max-width: 768px) {
-  /* 작은 화면에서는 텍스트 크기를 줄이고, 셀의 패딩도 조정 */ 
- table { font-size: 14px; }
+  table {
+    font-size: 14px; /* 작은 화면에서는 폰트 크기 조정 */
+  }
+  th, td {
+    padding: 10px 15px; /* 패딩 조정 */
+  }
 }
+
 
 
 /************************
