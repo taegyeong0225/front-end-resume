@@ -313,11 +313,20 @@
       <div id="section-3" class="section">
         <div class="intro-text">
           <h2 class="section-title">프로젝트</h2>
+          <p class="project-note">상자를 누르면 GitHub로 이동합니다.</p>
         </div>
         <div class="project-info icon">
           <div class="projects">
+            
             <!-- v-for로 프로젝트 데이터를 순회 -->
-            <div class="project-card" v-for="(project, index) in projects" :key="index">
+            <a
+              v-for="(project, index) in projects"
+              :key="index"
+              :href="project.url"
+              target="_blank"
+              class="project-card"
+              style="text-decoration: none; color: inherit;"
+            >
               <img :src="project.image" alt="Project Image" class="project-image" />
               <div class="project-info">
                 <h3 class="project-title">{{ project.title }}</h3>
@@ -331,7 +340,7 @@
                   />
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

@@ -19,44 +19,53 @@ export default {
       ],
       projects: [
         {
-          title: "Vue.js Portfolio",
+          title: "My Portfolio",
           summary: "Vue.js로 만든 개인 포트폴리오 웹사이트",
-          image: "https://via.placeholder.com/300",
+          image: require("@/assets/vue.png"),
           techStack: [
             "https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white",
-            "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+            "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
           ],
+          url: "https://github.com/taegyeong0225/front-end-resume"
         },
         {
-          title: "Python Web Scraping",
-          summary: "Python을 이용한 웹 크롤링 프로젝트",
-          image: "https://via.placeholder.com/300",
+          title: "jango",
+          summary: "Python django를 이용한 냉장료 재료 관리 웹 사이트",
+          image: require("@/assets/django.jpg"),
           techStack: [
             "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
-            "https://img.shields.io/badge/BeautifulSoup-0084B3?style=for-the-badge&logo=python&logoColor=white",
-          ],
-        },
-        {
-          title: "React Dashboard",
-          summary: "React를 이용한 대시보드 프로젝트",
-          image: "https://via.placeholder.com/300",
-          techStack: [
-            "https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white",
-            "https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white",
-          ],
-        },
-        {
-          title: "Django REST API",
-          summary: "Django로 구현한 RESTful API 서버",
-          image: "https://via.placeholder.com/300",
-          techStack: [
             "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white",
-            "https://img.shields.io/badge/REST-FF5733?style=for-the-badge&logo=rest&logoColor=white",
+            "https://img.shields.io/badge/BeautifulSoup-0084B3?style=for-the-badge&logo=python&logoColor=white",
+            "https://img.shields.io/badge/Ajax-005571?style=for-the-badge&logo=javascript&logoColor=white",
           ],
+          url: "https://github.com/taegyeong0225/django_calender"
         },
+        {
+          title: "환전 은행 시스템",
+          summary: "java swing을 이용한 환전 은행 시스템",
+          image: require("@/assets/swing.png"),
+          techStack: [
+            "https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white", // Java 배지
+            "https://img.shields.io/badge/Swing-F29111?style=for-the-badge&logo=java&logoColor=white" // Swing을 추가적으로 강조
+          ],
+          url: "https://github.com/taegyeong0225/java-final-project-bank"
+        },
+        {
+          title: "오늘 뭐 먹지",
+          summary: "학교 주변 맛집 추천 어플",
+          image: require("@/assets/android.png"),
+          techStack: [
+            "https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white", // Java 배지
+            "https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white", // Android 배지
+            "https://img.shields.io/badge/Google%20Maps%20API-4285F4?style=for-the-badge&logo=google-maps&logoColor=white" // Google Maps API 배지
+          ]
+          ,
+          url: "https://github.com/taegyeong0225/inha-food-review-app"
+        }
       ],
     };
   },
+  
   mounted() {
     console.log("project content: ", this.projects);
 
