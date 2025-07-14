@@ -87,23 +87,27 @@ nav ul li a:hover {
       본문 콘텐츠 스타일
  ************************/
  .main-content { 
-  margin-left: 260px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
-  width: calc(100% - 260px - 20px); /* 사이드바 너비와 오른쪽 여백을 제외한 나머지 공간 차지 */
+  width: calc(100% - 260px); /* 사이드바 너비와 오른쪽 여백을 제외한 나머지 공간 차지 */
+  margin-left: 230px; /* 사이드바 너비만큼 왼쪽 여백 추가 */
   padding-right: 50px; /* 오른쪽 여백 추가 */
-  overflow: hidden; /* overflow를 유지 */
+  overflow: hidden; 
 }
-
 
 .section {
   height: auto; /* 섹션 높이를 콘텐츠에 맞게 자동으로 조정 */
   width: 100%;
   margin-top: 40px; /* 섹션 간 간격을 더 명확히 구분 */
   padding-top: 8vh; /* 섹션 위쪽 여백 */
-  padding-left: 10vh; /* 섹션 왼쪽 여백 */
+  padding-left: 100px; /* 섹션 왼쪽 여백 */
+  padding-right: 80px;
   margin-bottom: 70px; /* 섹션 간의 간격을 더 넓게 설정 */
   margin-right: 20px;
   display: block; /* 기본적으로 섹션은 보이도록 */
   transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+section:focus {
+  outline: none; /* 포커스 outline 제거 */
 }
 
 .section.hidden {
@@ -220,6 +224,7 @@ section p {
   display: flex;
   align-items: center;  /* 세로 정렬 */
   margin-bottom: 30px;
+  padding-right: 80px;
   justify-content: space-between; /* 스킬 이름과 설명을 양쪽에 배치 */
 }
 
@@ -277,7 +282,6 @@ progress::-webkit-progress-value {
 }
 
 /* 표 스타일 */
-/* 표 스타일 */
 table {
   width: 100%; /* 테이블 전체 너비 */
   border-collapse: collapse; /* 테두리 중첩 방지 */
@@ -288,6 +292,10 @@ table {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
   border-radius: 10px; /* 테두리를 둥글게 */
   overflow: hidden; /* 테두리 안으로 내용 제한 */
+}
+
+.awards-info {
+  padding-right: 80px; /* 테이블이 잘리지 않도록 패딩 추가 */
 }
 
 th, td {
@@ -303,7 +311,6 @@ th {
   font-weight: bold; /* 굵은 텍스트 */
   letter-spacing: 0.5px; /* 텍스트 간격 */
 }
-
 tr:nth-child(even) {
   background-color: #f9f9f9; /* 짝수 줄 배경색 */
 }
@@ -320,9 +327,10 @@ td {
   table {
     font-size: 14px; /* 작은 화면에서는 폰트 크기 조정 */
   }
-  th, td {
+  .portfolio th, .portfolio td {
     padding: 10px 15px; /* 패딩 조정 */
   }
+  
 }
 
 
@@ -333,6 +341,7 @@ td {
  .project-note {
   margin-top: 20px;
   text-align: center;
+  padding-right: 80px;
   font-size: 0.9rem;
   color: #888; /* 회색 텍스트 */
 }
@@ -348,7 +357,7 @@ td {
 }
 
 .project-card {
-  flex: 1 1 calc(30% - 20px); /* 카드가 화면 너비의 30%를 차지 */
+  flex: 1 1 calc(50% - 20px); /* 카드가 화면 너비의 0%를 차지 */
   max-width: 300px; /* 카드의 최대 너비를 제한 */
   min-width: 250px; /* 카드의 최소 너비를 제한 */
   background-color: #fff;

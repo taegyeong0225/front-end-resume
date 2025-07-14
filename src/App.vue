@@ -25,7 +25,7 @@
         <span class="cursor typing">|</span> 
         <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'cake-candles']" />
-          <span>2004.02.25 (만 20세)</span>
+          <span>2004.02.25 (만 21세)</span>
         </div>
         <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'phone']" />
@@ -41,10 +41,12 @@
         </div>
         <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'school']" />
-          <span>인하공업전문대학 컴퓨터정보공학과 (3년제 전문대학 졸업 예정)</span>
+          <span>인하공업전문대학 컴퓨터정보공학과 (3년제 전문학사 졸업)</span>
+          <span>인하공업전문대학 컴퓨터정보공학과 전공심화 (학사과정 졸업예정)</span>
         </div>
         <div class="education">
-          <p>4.01 / 4.5 &nbsp; | &nbsp;2022.02 ~ 2025.02</p>
+          <p>4.08 / 4.5 &nbsp; | &nbsp;2022.02 ~ 2025.02</p>
+          <p>4.45 / 4.5 &nbsp; | &nbsp;2025.02 ~ </p>
         </div>
         <div class="contact-icon">
           <a href="https://github.com/taegyeong0225" target="_blank">
@@ -190,7 +192,7 @@
 
         <h2>수상내역</h2>
         <div class="awards-info">
-          <table>
+          <table class="portfolio">
             <thead>
               <tr>
                 <th>수상일자</th>
@@ -245,7 +247,7 @@
         
         <h2>교내외 활동내역</h2>
         <div class="awards-info">
-          <table>
+          <table class="portfolio">
             <thead>
               <tr>
                 <th>활동기관</th>
@@ -284,8 +286,8 @@
         </div>
 
         <h2>자격증</h2>
-        <div class="education-info">
-          <table>
+        <div class="awards-info">
+          <table class="portfolio">
             <thead>
               <tr>
                 <th>자격증명</th>
