@@ -3,7 +3,7 @@
     <!-- 사이드바 -->
     <div class="sidebar">
       <div class="profile">
-        <img :src="profileImage" alt="Profile Image" class="profile-image" />
+        <img :src="require('@/assets/증명사진.jpg')" />
         <h2>고태경</h2>
         <p>Data Analyst</p>
       </div>
