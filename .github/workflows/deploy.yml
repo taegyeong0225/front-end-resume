@@ -25,3 +25,4 @@ jobs:
           publish_dir: ./dist
           external_repository: taegyeong0225/taegyeong0225.github.io
           publish_branch: main
+          force_orphan: true
