@@ -4,7 +4,7 @@ const glob = require('glob');
 const path = require('path');
 
 module.exports = defineConfig({
-  publicPath: '/',
+  publicPath: './',
   outputDir: 'dist',
   
   transpileDependencies: true,

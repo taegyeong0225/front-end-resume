@@ -4,7 +4,7 @@
     <!-- 사이드바 -->
     <div class="sidebar">
       <div class="profile">
-        <img src="/images/profile.jpg" />
+        <img src="images/profile.jpg" />
         <h2>고태경</h2>
         <p>Data Analyst</p>
       </div>
