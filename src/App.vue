@@ -1,9 +1,10 @@
+<!-- /Users/gotaegyeong/Desktop/front-end-resume/src/App.vue -->
 <template>
   <div>
     <!-- 사이드바 -->
     <div class="sidebar">
       <div class="profile">
-        <img :src="require('@/assets/증명사진.jpg')" />
+        <img src="/images/profile.jpg" />
         <h2>고태경</h2>
         <p>Data Analyst</p>
       </div>
