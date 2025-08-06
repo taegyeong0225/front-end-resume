@@ -3,7 +3,7 @@
     <!-- 사이드바 -->
     <div class="sidebar">
       <div class="profile">
-        <img :src="require('@/assets/증명사진.jpg')" alt="Profile Image" class="profile-image" />
+        <img :src="profileImage" alt="Profile Image" class="profile-image" />
         <h2>고태경</h2>
         <p>Data Analyst</p>
       </div>
@@ -256,11 +256,11 @@
                 <td>대학생 기획단 꿈꾼</td>
                 <td>검단청소년센터</td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>2021.12.01~2023.01.31</td>
                 <td>데이터 라벨링 아르바이트</td>
                 <td>(주)미디어그룹사람과숲</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
