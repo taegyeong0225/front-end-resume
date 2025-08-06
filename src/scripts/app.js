@@ -43,7 +43,7 @@ export default {
         {
           title: "환전 은행 시스템",
           summary: "java swing을 이용한 환전 은행 시스템",
-          image: r"assets/swing.png",
+          image: "assets/swing.png",
           techStack: [
             "https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white", // Java 배지
             "https://img.shields.io/badge/Swing-F29111?style=for-the-badge&logo=java&logoColor=white" // Swing을 추가적으로 강조
