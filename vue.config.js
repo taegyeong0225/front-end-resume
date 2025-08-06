@@ -4,6 +4,8 @@ const glob = require('glob');
 const path = require('path');
 
 module.exports = defineConfig({
+  publicPath: './',
+  
   transpileDependencies: true,
 
   // Webpack 설정 확장
