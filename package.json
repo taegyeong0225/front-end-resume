@@ -2,6 +2,8 @@
   "name": "front-end-resume",
   "version": "0.1.0",
   "private": true,
+
+  "npm.packageManager": "npm", 
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
