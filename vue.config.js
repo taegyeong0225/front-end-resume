@@ -4,9 +4,7 @@ const glob = require('glob');
 const path = require('path');
 
 module.exports = defineConfig({
-  publicPath: process.env.NODE_ENV === 'production'
-  ? '/front-end-resume/'
-  : './',
+  publicPath: '/',
   
   transpileDependencies: true,
 
