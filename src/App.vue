@@ -21,7 +21,7 @@
     <main class="main-content">
       <!-- about -->
       <div id="section-0" class="section">
-        <span id="target" class="introduce typing">안녕하세요, 데이터 분석가를 희망하는 고태경입니다.</span>
+        <span id="target" class="introduce typing">(test)안녕하세요, 데이터 분석가를 희망하는 고태경입니다.</span>
         <span class="cursor typing">|</span> 
         <div class="contact-info icon">
           <font-awesome-icon :icon="['fas', 'cake-candles']" />
