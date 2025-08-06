@@ -24,4 +24,4 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./dist
           external_repository: taegyeong0225/taegyeong0225.github.io
-          publish_branch: main
+          publish_branch: master
